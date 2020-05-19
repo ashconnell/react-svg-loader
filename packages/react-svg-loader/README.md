@@ -60,7 +60,8 @@ By default the loader outputs ES2015 code (with JSX compiled to JavaScript using
       options: {
         svgo: {
           plugins: [
-            { removeTitle: false }
+            { removeTitle: false },
+            { removeViewBox: false },
           ],
           floatPrecision: 2
         }
@@ -88,6 +89,7 @@ Babel Transform with <code>preset=react</code> and <a href="https://github.com/b
 
 + Root element is always `<svg>`
 + SVG is optimized using SVGO
++ If you want to resize the SVG using the width/height attributes you will need to set `removeViewBox: false` in the SVGO options (see above)
 
 ## LICENSE
 
